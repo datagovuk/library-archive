@@ -1,0 +1,18 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <script type="text/javascript">
+    (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Open Sans|Roboto" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% include no_cache.html %}
+
+  <link rel="stylesheet" media="screen" href="{{ "/css/app.css" | prepend: site.baseurl }}">
+  <link rel='stylesheet' media="screen" href="{{ "/css/prototype.css" | prepend: site.baseurl }}">
+
+  <link title="Search" rel="search" type="application/opensearchdescription+xml" href="https://www.gov.uk/search/opensearch.xml">
+</head>

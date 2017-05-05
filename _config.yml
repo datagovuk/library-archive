@@ -1,0 +1,16 @@
+title: Data.gov.uk Library Archive
+email:
+description: > # this means to ignore newlines until "baseurl:"
+  An archive of the library content from data.gov.uk.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  datagovuk
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
