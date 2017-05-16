@@ -18,10 +18,19 @@
       </div>
 
       <div class="grid-row">
-        <div class="column-one-third">
-          &nbsp;
+        <div class="column-full">
+
+          <div id="search-box">
+            <input id="q" name="q" type="text" placeholder="" class="form-control search" autocomplete="off"><button type="submit" class="search-submit">Find data</button>
+          </div>
+
         </div>
-        <div class="column-two-thirds">
+      </div>
+
+      <hr/>
+
+      <div class="grid-row">
+        <div class="column-full">
           <ul>
           {% for post in site.posts reversed %}
             <li class='search-result'>
