@@ -19,15 +19,20 @@
 
       <div class="grid-row">
         <div class="column-full">
-
-          <div id="search-box">
-            <input id="q" name="q" type="text" placeholder="" class="form-control search" autocomplete="off"><button type="submit" class="search-submit">Find data</button>
+          <div id="search-box" style='display:none;'>
+            <input id="q" name="q" type="text" placeholder="" class="form-control search" autocomplete="off"><button type="submit" class="search-submit" onclick='javascript:search(this);return false;'>Find data</button>
           </div>
-
+          <script type="text/javascript">
+            $("#search-box").show();
+          </script>
         </div>
       </div>
 
-      <hr/>
+      <div class="grid-row">
+        <div class="column-full">
+          <h2 class="heading-small"><span id='post_count'>{{ site.posts.size }}</span> resources</h2>
+        </div>
+      </div>
 
       <div class="grid-row">
         <div class="column-full">
@@ -53,9 +58,12 @@
                 {% if post.summary %}
                   {{ post.summary }}
                 {% else %}
-                  {{ post.content | truncate: 180  }}
+                  {{ post.content | strip_html | truncate: 180  }}
                 {% endif %}
               </p>
+              <span class='full-content' style="display:none;">
+                {{ post.content | strip_html }}
+              </span>
 
               {% if post.resources %}
                 <h1 class="heading-small">Resources</h1>
