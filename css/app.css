@@ -8143,7 +8143,7 @@ a, a:visited {
 a[href^="/"]:after,
 a[href^="http://"]:after,
 a[href^="https://"]:after {
-  content: " (" attr(href) ")";
+  content: "";
   font-size: 90%; }
 
 a[href^="javascript:"]:after,
@@ -13758,3 +13758,23 @@ a:focus {
 
 
 /*# sourceMappingURL=app.css.map*/
+
+
+.post-content h1{
+  font-size: larger;
+}
+
+.post-content strong{
+  font-weight: bold;
+}
+
+.search-result {
+  margin-bottom: 40px;
+}
+a.title {
+  color: #333;
+  text-decoration: none;
+}
+a.title:hover {
+  text-decoration: underline;
+}

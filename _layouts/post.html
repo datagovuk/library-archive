@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body class="">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    {% include header.html %}
+
+    <main id="content" role="main">
+
+      <div class="grid-row">
+        <div class="column-full">
+          <h1 class="heading-large">{{page.title}}</h1>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class='column-full post-content'>
+          {{ page.content }}
+        </div>
+      </div>
+
+      {% if page.resources %}
+      <div class="grid-row">
+        <div class='column-full'>
+          <h1 class="heading-small">Resources</h1>
+          <ul>
+          {% for resource in page.resources %}
+            <li>
+              {% if resource.mimetype == 'application/pdf' %}
+                <img src="/images/application-pdf.png">
+              {% else %}
+                <img src="/images/x-office-document.png">
+              {% endif %}
+              <a href="/files/{{resource.filename}}">{{resource.filename}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        </div>
+      </div>
+      {% endif %}
+
+
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>
+
+
