@@ -54,9 +54,9 @@
                 {% for resource in post.resources %}
                   <li>
                     {% if resource.mimetype == 'application/pdf' %}
-                      <img src="images/application-pdf.png">
+                      <img src="/images/application-pdf.png">
                     {% else %}
-                      <img src="images/x-office-document.png">
+                      <img src="/images/x-office-document.png">
                     {% endif %}
                     <a href="/files/{{resource.filename}}">{{resource.filename}}</a>
                   </li>
