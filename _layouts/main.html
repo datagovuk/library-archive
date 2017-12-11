@@ -44,7 +44,7 @@
               {% endfor %}
 
               <h1 class="heading-medium">
-                <a class='title' href="{{post.url}}">{{post.title}}</a>
+                {{post.title}}
 
                 <span class="heading-secondary">
                   Submitted on {{ post.created }}
@@ -71,11 +71,11 @@
                 {% for resource in post.resources %}
                   <li>
                     {% if resource.mimetype == 'application/pdf' %}
-                      <img src="/images/application-pdf.png">
+                      <img src="images/application-pdf.png">
                     {% else %}
-                      <img src="/images/x-office-document.png">
+                      <img src="images/x-office-document.png">
                     {% endif %}
-                    <a href="/files/{{resource.filename}}">{{resource.filename}}</a>
+                    <a href="files/{{resource.filename}}">{{resource.filename}}</a>
                   </li>
                 {% endfor %}
               </ul>
